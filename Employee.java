@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class Employee{
   int id,monthlySalary;
   static String companyName;
@@ -16,10 +16,12 @@ public class Employee{
     System.out.println("Company Name: "+companyName);
   }
   public static void main(String args[]){
-    companyName="ABC Corp";
+    Scanner sc=new Scanner(System.in);
+    companyName="Abc";
     Employee e1=new Employee(101, 5000);
     e1.displayEmployeeDetails(e1.id, e1.monthlySalary);
     Employee e2=new Employee(102, 7000);
     e2.displayEmployeeDetails(e2.id, e2.monthlySalary);
+    sc.close();
   }
 }

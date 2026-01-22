@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class Student{
   private int id,marks;
   private String name;
@@ -30,10 +30,14 @@ public class Student{
     return false;
   }
   public static void main(String args[]){
-    Student s1=new Student(1, "abc", 35);
+    Scanner sc=new Scanner(System.in);
+    int i=sc.nextInt(),m=sc.nextInt();
+    String name=sc.next();
+    Student s1=new Student(i, name, m);
     System.out.println(s1.getId());
     System.out.println(s1.getMarks());
     System.out.println(s1.getName());
     System.out.println(s1.isPassed(s1.getMarks()));
+    sc.close();
   }
 }
